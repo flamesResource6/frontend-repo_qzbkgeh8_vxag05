@@ -1,16 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import App from './App'
-import Test from './Test'
 import './index.css'
+import Layout from './components/Layout'
+import { Home, TestPage, ResultPage } from './components/Pages'
+import NotFound from './components/NotFound'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/test" element={<Test />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/candidate" element={<Home />} />
+          <Route path="/recruiter" element={<Home />} />
+          <Route path="/exam" element={<TestPage />} />
+          <Route path="/result" element={<ResultPage />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
