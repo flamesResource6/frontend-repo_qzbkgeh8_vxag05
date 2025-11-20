@@ -19,14 +19,14 @@ export default function Hero() {
             Test Skills. Select Talent. Hire Smarter.
           </h1>
           <p className="mt-6 text-lg text-white/80 max-w-2xl">
-            AI-based candidate skill evaluation platform for companies.
+            AI-driven platform to evaluate skills and match the right candidate with the right company.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <Link to="/exam" className="px-6 py-3 rounded-xl bg-white text-slate-900 font-semibold shadow-lg hover:opacity-90 transition">
-              Start Test
+              Take Test
             </Link>
-            <Link to="#" className="px-6 py-3 rounded-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 transition">
+            <Link to="/login" className="px-6 py-3 rounded-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 transition">
               Login
             </Link>
           </div>

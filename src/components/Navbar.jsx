@@ -29,6 +29,8 @@ export default function Navbar() {
 
             <nav className="hidden md:flex items-center gap-1">
               {navItem('/', 'Home')}
+              {navItem('/login', 'Login')}
+              {navItem('/resume', 'Resume Upload')}
               {navItem('/candidate', 'Candidate')}
               {navItem('/recruiter', 'Recruiter')}
               {navItem('/exam', 'Test')}
@@ -36,8 +38,8 @@ export default function Navbar() {
             </nav>
 
             <div className="hidden md:flex items-center gap-3">
-              <Link to="/exam" className="px-4 py-2 rounded-xl bg-white text-slate-900 font-semibold hover:opacity-90 transition">Start Test</Link>
-              <Link to="#" className="px-4 py-2 rounded-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 transition">Login</Link>
+              <Link to="/exam" className="px-4 py-2 rounded-xl bg-white text-slate-900 font-semibold hover:opacity-90 transition">Take Test</Link>
+              <Link to="/login" className="px-4 py-2 rounded-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 transition">Login</Link>
             </div>
 
             <button onClick={() => setOpen(!open)} className="md:hidden text-white/90">
@@ -48,13 +50,15 @@ export default function Navbar() {
           {open && (
             <div className="md:hidden px-4 pb-4 flex flex-col gap-2">
               {navItem('/', 'Home')}
+              {navItem('/login', 'Login')}
+              {navItem('/resume', 'Resume Upload')}
               {navItem('/candidate', 'Candidate')}
               {navItem('/recruiter', 'Recruiter')}
               {navItem('/exam', 'Test')}
               {navItem('/result', 'Results')}
               <div className="flex gap-2 pt-2">
-                <Link to="/exam" className="flex-1 px-4 py-2 rounded-xl bg-white text-slate-900 font-semibold">Start Test</Link>
-                <Link to="#" className="flex-1 px-4 py-2 rounded-xl bg-white/10 text-white border border-white/20">Login</Link>
+                <Link to="/exam" className="flex-1 px-4 py-2 rounded-xl bg-white text-slate-900 font-semibold">Take Test</Link>
+                <Link to="/login" className="flex-1 px-4 py-2 rounded-xl bg-white/10 text-white border border-white/20">Login</Link>
               </div>
             </div>
           )}
